@@ -23,5 +23,14 @@ module Arrays
 			end
 		end
 	end
+
+	def repeat_separator(word, separator, count)
+		string = ""
+		(2..count).each do |n|
+			string += word + separator
+		end
+		string += word 
+		string
+	end
 	
 end
