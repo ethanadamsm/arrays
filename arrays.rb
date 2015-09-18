@@ -44,5 +44,21 @@ module Arrays
 		end
 		string1 == string2
 	end
+
+	def starry(string)
+		string_array = []
+		string = string.downcase
+		(0...string.length).each do |n|
+			if string[n] == "*"
+				string_array.push(string[n-1] + string[n] + string[n + 1])
+			end
+		end
+		(0...string_array.length).each do |n|
+			if(string_array[n][0] != string_array[n][2])
+				return false
+			end
+		end
+		true
+	end
 	
 end
