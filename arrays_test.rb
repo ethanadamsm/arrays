@@ -21,4 +21,11 @@ class ArraysTest < MiniTest::Test
 		assert_equal 21, @m.max([1, 2, 7, 21])
 	end
 
+	def test_lucky13?
+		assert_equal true, @m.lucky13?([4, 5, 6, 2, 67])
+		assert_equal false, @m.lucky13?([1, 4, 5,])
+		assert_equal false, @m.lucky13?([3, 4, 5,])
+		assert_equal false, @m.lucky13?([3, 4, 1])
+	end
+
 end
