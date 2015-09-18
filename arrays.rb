@@ -13,5 +13,15 @@ module Arrays
 		end
 		max
 	end	
+
+	def lucky13?(array)
+		array.each do |element|
+			if element == 1 || element == 3
+				return false
+			else
+				return true
+			end
+		end
+	end
 	
 end
