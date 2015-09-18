@@ -39,4 +39,9 @@ class ArraysTest < MiniTest::Test
 		assert_equal false, @m.same_ends?([2, 3, 4, 5, 1, 2], 3)
 	end
 
+	def test_starry
+		assert_equal true, @m.starry("saa*Abs")
+		assert_equal false, @m.starry("saa*bas")
+	end
+
 end
