@@ -33,4 +33,10 @@ class ArraysTest < MiniTest::Test
 		assert_equal "HelloAndHello", @m.repeat_separator("Hello", "And", 2)
 	end
 
+	def test_same_ends?
+		assert_equal true, @m.same_ends?([3, 4, 5, 6, 3, 4], 2)
+		assert_equal true, @m.same_ends?([1, 2, 2, 3, 4], 0)
+		assert_equal false, @m.same_ends?([2, 3, 4, 5, 1, 2], 3)
+	end
+
 end
