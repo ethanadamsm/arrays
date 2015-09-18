@@ -16,4 +16,9 @@ class ArraysTest < MiniTest::Test
 		assert_equal [5, 8], @m.middles([4, 5, 4], [7, 8, 9])
 	end
 
+	def test_max
+		assert_equal 7, @m.max([4, 5, 2, 2, 7])
+		assert_equal 21, @m.max([1, 2, 7, 21])
+	end
+
 end
