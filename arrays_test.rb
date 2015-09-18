@@ -27,5 +27,10 @@ class ArraysTest < MiniTest::Test
 		assert_equal false, @m.lucky13?([3, 4, 5,])
 		assert_equal false, @m.lucky13?([3, 4, 1])
 	end
+	
+	def test_repeat_separator
+		assert_equal "HatBlankHatBlankHat", @m.repeat_separator("Hat", "Blank", 3)
+		assert_equal "HelloAndHello", @m.repeat_separator("Hello", "And", 2)
+	end
 
 end
