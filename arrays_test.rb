@@ -44,4 +44,9 @@ class ArraysTest < MiniTest::Test
 		assert_equal false, @m.starry("saa*bas")
 	end
 
+	def test_plus_it
+		assert_equal "++++dkd+++dkd", @m.plus_it("asdfdkdajkdkd", "dkd")
+		assert_equal "a+++a++a+", @m.plus_it("ajkjajkak", "a")
+	end
+
 end
