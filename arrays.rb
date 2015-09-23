@@ -109,4 +109,19 @@ module Arrays
 		final_array
 	end
 
+	def max_span(array)
+		maxim = 0
+		range = (array.length - 1..0)
+		(0...array.length).each do |n|
+			(range.first).downto(range.last).each do |x|
+				if array[n] == array[x]
+					if x - n > maxim
+						maxim = x - n + 1
+					end
+				end
+			end
+		end
+		maxim
+	end
+
 end
