@@ -54,4 +54,9 @@ class ArraysTest < MiniTest::Test
 		assert_equal [0, 0, 5, 2, 4], @m.zero_front([5, 0, 2, 4, 0])
 	end
 
+	def test_ten_run
+		assert_equal [1, 2, 10, 10, 40, 40, 10, 10], @m.ten_run([1, 2, 10, 3, 40, 40, 10, 5])
+		assert_equal [20, 10, 30, 40], @m.ten_run([20, 10, 30, 40])
+	end
+
 end
