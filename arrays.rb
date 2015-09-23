@@ -73,5 +73,24 @@ module Arrays
 		end
 		string_final
 	end
+
+	def zero_front(array)
+		array_nums = []
+		array_final = []
+		zeros = 0
+		(0...array.length).each do |n|
+			if array[n] != 0
+				array_nums.push(array[n])
+			else
+				zeros += 1
+			end
+		end
+		if zeros > 0
+			(0...zeros).each do |n|
+				array_final.push(0)
+			end
+		end
+		array_final += array_nums
+	end
 	
 end
