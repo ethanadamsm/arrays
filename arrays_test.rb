@@ -49,4 +49,9 @@ class ArraysTest < MiniTest::Test
 		assert_equal "a+++a++a+", @m.plus_it("ajkjajkak", "a")
 	end
 
+	def test_zero_front
+		assert_equal [0, 5, 6, 7, 1], @m.zero_front([5, 0, 6, 7, 1])
+		assert_equal [0, 0, 5, 2, 4], @m.zero_front([5, 0, 2, 4, 0])
+	end
+
 end
