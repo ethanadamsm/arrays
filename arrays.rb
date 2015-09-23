@@ -62,14 +62,16 @@ module Arrays
 	end
 
 	def plus_it(word, token)
-		string_final = ""
+		string_final = "+"*word.length
 		(0...word.length).each do |n|
-			if word[n, n + token.length - 1] == token #asdfdkdajkdkd
-				string_final += 
-				n += token.length
+			if n + token.length > word.length
+				break
+			end
+			if word[n..n + (token.length - 1)] == token
+				string_final[n..n + token.length - 1] = token	
 			end
 		end
-		word
+		string_final
 	end
 	
 end
