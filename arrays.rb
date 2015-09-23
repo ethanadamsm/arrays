@@ -92,5 +92,21 @@ module Arrays
 		end
 		array_final += array_nums
 	end
-	
+
+	def ten_run(array)
+		final_array = []
+		current = 1
+		array.each do |element|
+			if element % 10 == 0
+				current = element
+			end
+			if current % 10 == 0 
+				final_array.push(current)
+			else
+				final_array.push(element)
+			end
+		end
+		final_array
+	end
+
 end
