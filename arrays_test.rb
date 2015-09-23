@@ -59,4 +59,9 @@ class ArraysTest < MiniTest::Test
 		assert_equal [20, 10, 30, 40], @m.ten_run([20, 10, 30, 40])
 	end
 
+	def test_max_span
+		assert_equal 7, @m.max_span([1, 2, 3, 4, 2, 1, 1, 2])
+		assert_equal 2, @max_span([2, 2, 1, 3])
+	end
+
 end
